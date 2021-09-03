@@ -1,5 +1,5 @@
 # Various Reverse Shells
-# Shel Listener
+# Shell Listener
 ```
 nc -lvp 9999
 ```
